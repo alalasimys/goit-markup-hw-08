@@ -1,0 +1,43 @@
+.customers {
+  @extend %section;
+}
+
+.customer-title {
+  @extend %title;
+}
+
+.customer-list {
+  @extend %list;
+  @include centeredFlex($value: upset);
+}
+
+.customer-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.customer-link {
+  @include centeredFlex();
+  @extend %link;
+  width: 170px;
+  height: 90px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  @include transition(border);
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+
+.customer-icon {
+  @include transition(fill);
+  fill: #afb1b8;
+
+  .customer-link:hover &,
+  .customer-link:focus & {
+    fill: $accent-color;
+  }
+}

@@ -1,0 +1,42 @@
+.works {
+  padding-bottom: 94px;
+}
+.work-title {
+  @extend %title;
+}
+
+.work-list {
+  @extend %list;
+  @include flex();
+}
+
+.work-item {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+}
+
+.work-description {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+
+  @include centeredFlex($type: center, $value: center);
+  height: 70px;
+  width: 100%;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $white;
+
+  background-color: rgba(47, 48, 58, 0.8);
+}

@@ -1,0 +1,34 @@
+.contacts {
+  @extend %list;
+  @include centeredFlex($type: none);
+  margin-left: auto;
+
+  &-item + &-item {
+    margin-left: 50px;
+  }
+}
+
+.contacts-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @extend %link;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.contact-icon {
+  margin-right: 10px;
+
+  fill: currentColor;
+}

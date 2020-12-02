@@ -1,0 +1,48 @@
+.gallery {
+  @extend %section;
+}
+
+.gallery-title {
+  @extend %visually-hidden;
+}
+
+.filter-list {
+  @extend %list;
+  @include centeredFlex();
+}
+
+.filter-item {
+  display: flex;
+
+  & + & {
+    margin-left: 8px;
+  }
+}
+
+.filter-button {
+  @extend %button;
+  padding: 6px 22px;
+  margin-bottom: 50px;
+
+  font-weight: 500;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $title-text-color;
+
+  background-color: $secondary-bg-color;
+  border: 1px solid transparent;
+
+  @include transition(background-color);
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $white;
+    cursor: pointer;
+
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}

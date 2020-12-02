@@ -1,0 +1,125 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $bg-dark;
+}
+
+.footer-flex {
+  @include centeredFlex($type: space-between, $value: baseline);
+}
+
+.footer-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-wrap {
+  margin-right: 70px;
+}
+
+.address {
+  @extend %link;
+  display: inline-block;
+
+  margin-bottom: 9px;
+
+  font-style: normal;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.footer-contact {
+  @extend %link;
+  color: $footer-contact-color;
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.join-us {
+  margin-right: 93px;
+}
+
+.join-us-text {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $white;
+}
+
+.subscribe {
+  margin-right: auto;
+}
+
+.subscribe-wrap {
+  display: flex;
+}
+
+.subscribe-input {
+  width: 358px;
+  padding: 16px;
+  color: $white;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.subscribe-btn {
+  @extend %button;
+  position: relative;
+  display: inline-block;
+
+  margin-left: 12px;
+  padding-left: 25px;
+  padding-right: 62px;
+
+  @include transition(color);
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    background-color: $white;
+  }
+}
+
+.icon-send {
+  position: absolute;
+
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  fill: $white;
+  @include transition(fill);
+
+  .subscribe-btn:hover &,
+  .subscribe-btn:focus & {
+    fill: $accent-color;
+  }
+}
