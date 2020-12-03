@@ -10,16 +10,19 @@
   @extend %list;
   @include centeredFlex($value: upset);
   flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
-.customer-item:not(:last-child) {
-  margin-right: 30px;
+.customer-item {
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc(100% / 2 - 30px);
 }
 
 .customer-link {
   @include centeredFlex();
   @extend %link;
-  width: 170px;
   height: 90px;
 
   border: 1px solid #afb1b8;
