@@ -1,9 +1,9 @@
-.navigation-link, .logo, .contacts-link, .customer-link, .social-link, .address, .footer-contact {
+.navigation-link, .mobile-navigation-link, .logo, .contacts-link, .mobile-contacts-link, .customer-link, .social-link, .address, .footer-contact {
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation, .contacts, .benefit__list, .work-list, .team-list, .customer-list, .social-list {
+.navigation, .mobile-navigation, .contacts, .mobile-contacts, .benefit__list, .work-list, .team-list, .customer-list, .social-list {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -102,25 +102,61 @@ body {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  width: 1200px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .header-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-bottom: 1px solid #ececec;
+}
+
+@media screen and (min-width: 768px) {
+  .header-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .main-nav {
   display: flex;
-  justify-content: none;
+  justify-content: space-between;
   align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    justify-content: unset;
+    align-items: center;
+  }
+}
+
 .navigation {
-  display: flex;
+  display: none;
   margin-left: 93px;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+  }
 }
 
 .navigation-item:not(:last-child) {
@@ -165,6 +201,105 @@ body {
   transform: scale(1);
 }
 
+.mobile-menu-btn {
+  display: block;
+  background-color: transparent;
+  border: none;
+}
+
+.mobile-menu-btn:focus, .mobile-menu-btn:hover {
+  fill: #2196f3;
+}
+
+.mobile-menu-btn.is--open {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+.close-menu-btn {
+  display: none;
+}
+
+.close-menu-btn.is--open {
+  display: block;
+  background-color: transparent;
+  border: none;
+}
+
+.close-menu-btn.is--open:focus, .close-menu-btn.is--open:hover {
+  fill: #2196f3;
+}
+
+.mobile-menu {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #ffffff;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.mobile-menu.is--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-navigation {
+  text-align: center;
+}
+
+.mobile-navigation-link {
+  position: relative;
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.142;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+
+.mobile-navigation-link:hover, .mobile-navigation-link:focus {
+  color: #2196f3;
+}
+
+.mobile-navigation-link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+  transform: scale(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-navigation-link.current {
+  color: #2196f3;
+}
+
+.mobile-navigation-link:hover::after, .mobile-navigation-link.current::after {
+  transform: scale(1);
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -187,14 +322,19 @@ body {
 }
 
 .contacts {
-  display: flex;
-  justify-content: none;
-  align-items: center;
-  margin-left: auto;
+  display: none;
 }
 
-.contacts-item + .contacts-item {
-  margin-left: 50px;
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    margin-left: auto;
+  }
+  .contacts-item + .contacts-item {
+    margin-left: 50px;
+  }
 }
 
 .contacts-link {
@@ -215,6 +355,29 @@ body {
 .contact-icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.mobile-contacts {
+  text-align: center;
+}
+
+.mobile-contacts-link {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.142;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.mobile-contacts-link:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.mobile-contacts-link:hover, .mobile-contacts-link:focus {
+  color: #2196f3;
 }
 
 .hero {
