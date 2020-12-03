@@ -7,8 +7,10 @@
 }
 
 .team-list {
-  @include flex();
   @extend %list;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
 }
 
 .team-item {

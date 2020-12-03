@@ -6,7 +6,9 @@
 }
 
 .footer-flex {
-  @include centeredFlex($type: space-between, $value: baseline);
+  @media screen and (min-width: $desktop) {
+    @include centeredFlex($type: space-between, $value: baseline);
+  }
 }
 
 .footer-wrap {
@@ -68,7 +70,9 @@
 }
 
 .subscribe-wrap {
-  display: flex;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
 }
 
 .subscribe-input {

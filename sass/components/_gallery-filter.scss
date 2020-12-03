@@ -9,6 +9,7 @@
 .filter-list {
   @extend %list;
   @include centeredFlex();
+  flex-wrap: wrap;
 }
 
 .filter-item {

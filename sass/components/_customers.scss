@@ -9,6 +9,7 @@
 .customer-list {
   @extend %list;
   @include centeredFlex($value: upset);
+  flex-wrap: wrap;
 }
 
 .customer-item:not(:last-child) {
