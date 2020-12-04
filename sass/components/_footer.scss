@@ -2,6 +2,10 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
   background-color: $bg-dark;
 }
 
@@ -11,19 +15,34 @@
   }
 }
 
+.flex-container {
+  margin-bottom: 60px;
+  @media screen and (min-width: $tablet) {
+    @include centeredFlex($type: space-around, $value: baseline);
+  }
+}
+
 .footer-wrap {
-  display: flex;
-  flex-direction: column;
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .contact-wrap {
-  margin-right: 70px;
+  @media screen and (min-width: $desktop) {
+    margin-right: 70px;
+  }
 }
 
 .address {
   @extend %link;
   display: inline-block;
-
+  margin-top: 20px;
   margin-bottom: 9px;
 
   font-style: normal;
@@ -38,6 +57,7 @@
 .footer-contact {
   @extend %link;
   color: $footer-contact-color;
+  display: block;
 
   &:not(:last-child) {
     margin-bottom: 9px;
@@ -50,7 +70,9 @@
 }
 
 .join-us {
-  margin-right: 93px;
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+  }
 }
 
 .join-us-text {
@@ -71,7 +93,7 @@
 
 .subscribe-wrap {
   @media screen and (min-width: $desktop) {
-    display: flex;
+    @include centeredFlex($type: space-between, $value: baseline);
   }
 }
 
@@ -98,10 +120,19 @@
   @extend %button;
   position: relative;
   display: inline-block;
-
-  margin-left: 12px;
+  margin-top: 20px;
   padding-left: 25px;
   padding-right: 62px;
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 12px;
+  }
 
   @include transition(color);
   @include transition(background-color);
