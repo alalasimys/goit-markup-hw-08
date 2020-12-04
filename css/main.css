@@ -71,7 +71,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 2px solid red;
 }
 
 h1,
@@ -330,8 +329,17 @@ body {
 @media screen and (min-width: 768px) {
   .contacts {
     display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
     justify-content: none;
     align-items: center;
+    flex-direction: row;
     margin-left: auto;
   }
   .contacts-item + .contacts-item {
@@ -341,13 +349,22 @@ body {
 
 .contacts-link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.142;
+  font-size: 12px;
+  line-height: 1.172;
   letter-spacing: 0.02em;
   color: #757575;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.142;
+  }
 }
 
 .contacts-link:hover, .contacts-link:focus {
@@ -619,6 +636,7 @@ body {
   max-width: 450px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 30px;
   padding-bottom: 30px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
