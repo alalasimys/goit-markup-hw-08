@@ -71,6 +71,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  outline: 2px solid red;
 }
 
 h1,
@@ -98,6 +99,7 @@ body {
 }
 
 .container {
+  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -429,16 +431,38 @@ body {
   padding-top: 94px;
 }
 
-@media screen and (min-width: 1200px) {
+.benefit__list {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
   .benefit__list {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
   }
-  .benefit__list__item {
-    width: calc((100% - 90px) / 4);
-  }
-  .benefit__list__item + .benefit__list__item {
+}
+
+.benefit__list .benefit__list__item {
+  width: 100%;
+  max-width: 450px;
+}
+
+@media screen and (min-width: 768px) {
+  .benefit__list .benefit__list__item {
     margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .benefit__list .benefit__list__item {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc(100% / 4 - 30px);
   }
 }
 
@@ -461,6 +485,13 @@ body {
   line-height: 1.142;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .benefit-title {
+    text-align: left;
+  }
 }
 
 .benefit-text {
@@ -471,19 +502,19 @@ body {
 }
 
 .icon-details::before {
-  background-image: url("../images/antena.png");
+  background-image: url("../images/benefits/desktop/antena.png");
 }
 
 .icon-in-time::before {
-  background-image: url("../images/clock.png");
+  background-image: url("../images/benefits/desktop/clock.png");
 }
 
 .icon-planning::before {
-  background-image: url("../images/diagram.png");
+  background-image: url("../images/benefits/desktop/diagram.png");
 }
 
 .icon-technology::before {
-  background-image: url("../images/astronaut.png");
+  background-image: url("../images/benefits/desktop/astronaut.png");
 }
 
 .works {
