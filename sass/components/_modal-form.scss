@@ -95,13 +95,17 @@
 .checkbox-label {
   display: inline-flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 
   margin-bottom: 30px;
 
   color: $primary-text-color;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+  }
 }
 
 .checkbox-link {
