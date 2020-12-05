@@ -8,8 +8,18 @@
 
 .filter-list {
   @extend %list;
-  @include centeredFlex();
+  @include centeredFlex($type: start);
   flex-wrap: wrap;
+  margin-bottom: 25px;
+
+  @media screen and (min-width: $tablet) {
+    @include centeredFlex();
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 .filter-item {
@@ -23,7 +33,11 @@
 .filter-button {
   @extend %button;
   padding: 6px 22px;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0;
+  }
 
   font-weight: 500;
   line-height: 1.62;

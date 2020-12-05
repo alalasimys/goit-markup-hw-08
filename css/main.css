@@ -43,8 +43,15 @@
 }
 
 .benefits, .team, .customers {
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .benefits, .team, .customers {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 
 .work-title, .team-title, .customer-title {
@@ -474,10 +481,6 @@ body {
 .hero-button:hover, .hero-button:focus {
   color: #2196f3;
   background-color: #ffffff;
-}
-
-.benefits {
-  padding-top: 94px;
 }
 
 .benefit__list {
@@ -997,10 +1000,6 @@ body {
   }
 }
 
-.flex-container {
-  margin-bottom: 60px;
-}
-
 @media screen and (min-width: 768px) {
   .flex-container {
     display: flex;
@@ -1011,6 +1010,12 @@ body {
 
 .footer-wrap:not(:last-child) {
   margin-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-wrap:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1051,9 +1056,14 @@ body {
   color: #2196f3;
 }
 
+.join-us {
+  margin-bottom: 60px;
+}
+
 @media screen and (min-width: 1200px) {
   .join-us {
     margin-right: 93px;
+    margin-bottom: 0;
   }
 }
 

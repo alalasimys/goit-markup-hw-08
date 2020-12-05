@@ -16,7 +16,6 @@
 }
 
 .flex-container {
-  margin-bottom: 60px;
   @media screen and (min-width: $tablet) {
     @include centeredFlex($type: space-around, $value: baseline);
   }
@@ -25,6 +24,10 @@
 .footer-wrap {
   &:not(:last-child) {
     margin-bottom: 60px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 0;
+    }
   }
 
   @media screen and (min-width: $desktop) {
@@ -70,8 +73,11 @@
 }
 
 .join-us {
+  margin-bottom: 60px;
+
   @media screen and (min-width: $desktop) {
     margin-right: 93px;
+    margin-bottom: 0;
   }
 }
 
