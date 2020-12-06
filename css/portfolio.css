@@ -88,6 +88,10 @@ body {
   background-color: #ffffff;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
