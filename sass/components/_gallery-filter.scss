@@ -25,8 +25,8 @@
 .filter-item {
   display: flex;
 
-  & + & {
-    margin-left: 8px;
+  &:not(:last-child) {
+    margin-right: 8px;
   }
 }
 

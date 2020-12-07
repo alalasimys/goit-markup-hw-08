@@ -419,8 +419,8 @@ header {
   display: flex;
 }
 
-.filter-item + .filter-item {
-  margin-left: 8px;
+.filter-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .filter-button {
