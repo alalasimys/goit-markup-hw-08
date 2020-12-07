@@ -1,6 +1,8 @@
-.header-wrap {
+header {
   border-bottom: 1px solid #ececec;
+}
 
+.header-wrap {
   @media screen and (min-width: $tablet) {
     @include centeredFlex();
   }
