@@ -716,12 +716,23 @@ header {
 }
 
 .subscribe-input {
-  width: 358px;
   padding: 16px;
   color: #ffffff;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 480px) {
+  .subscribe-input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-input {
+    width: 358px;
+  }
 }
 
 .subscribe-input::placeholder {
